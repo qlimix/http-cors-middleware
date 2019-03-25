@@ -14,6 +14,8 @@
         }
     },
     "require": {
+        "neomerx/cors-psr7": "^2.0",
+        "psr/http-factory": "^1.0",
         "psr/http-server-middleware": "^1.0"
     },
     "config": {
