@@ -50,7 +50,7 @@ final class CorsMiddleware implements MiddlewareInterface
     {
         $corsHeaders = $result->getResponseHeaders();
         foreach ($corsHeaders as $name => $value) {
-            $response->withAddedHeader($name, $value);
+            $response = $response->withHeader($name, $value);
         }
 
         return $response;
