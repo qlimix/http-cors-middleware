@@ -13,12 +13,32 @@
             "Qlimix\\HttpMiddleware\\": "src/"
         }
     },
+    "autoload-dev": {
+        "psr-4": {
+            "Qlimix\\Tests\\HttpMiddleware\\": "tests/"
+        }
+    },
     "require": {
         "neomerx/cors-psr7": "^2.0",
         "psr/http-factory": "^1.0",
         "psr/http-server-middleware": "^1.0"
     },
+    "require-dev": {
+        "qlimix/code-standard": "dev-master"
+    },
     "config": {
         "sort-packages": true
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:qlimix/codesniffer-standard.git"
+        },
+        {
+            "type": "vcs",
+            "url": "git@bitbucket.org:qlimix/code-standard.git"
+        }
+    ],
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
