@@ -1,13 +1,25 @@
 {
     "name": "qlimix/http-cors-middleware",
-    "type": "package",
-    "license": "LGPL-3.0-only",
+    "type": "library",
+    "description": "PSR15 CORS middleware implementation",
+    "license": "MIT",
+    "keywords": [
+        "cors",
+        "middleware",
+        "PSR15"
+    ],
     "authors": [
         {
             "name": "frank",
             "email": "frank@qlimix.net"
         }
     ],
+    "require": {
+        "php": ">=7.2",
+        "neomerx/cors-psr7": "^2.0",
+        "psr/http-factory": "^1.0",
+        "psr/http-server-middleware": "^1.0"
+    },
     "autoload": {
         "psr-4": {
             "Qlimix\\HttpMiddleware\\": "src/"
@@ -18,27 +30,10 @@
             "Qlimix\\Tests\\HttpMiddleware\\": "tests/"
         }
     },
-    "require": {
-        "neomerx/cors-psr7": "^2.0",
-        "psr/http-factory": "^1.0",
-        "psr/http-server-middleware": "^1.0"
-    },
     "require-dev": {
-        "qlimix/code-standard": "dev-master"
+        "qlimix/code-standard": "^1.0"
     },
     "config": {
         "sort-packages": true
-    },
-    "repositories": [
-        {
-            "type": "vcs",
-            "url": "git@bitbucket.org:qlimix/codesniffer-standard.git"
-        },
-        {
-            "type": "vcs",
-            "url": "git@bitbucket.org:qlimix/code-standard.git"
-        }
-    ],
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    }
 }
