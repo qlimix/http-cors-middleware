@@ -12,11 +12,8 @@ use Psr\Http\Server\RequestHandlerInterface;
 
 final class CorsMiddleware implements MiddlewareInterface
 {
-    /** @var AnalyzerInterface */
-    private $analyzer;
-
-    /** @var ResponseFactoryInterface */
-    private $response;
+    private AnalyzerInterface $analyzer;
+    private ResponseFactoryInterface $response;
 
     public function __construct(AnalyzerInterface $analyzer, ResponseFactoryInterface $response)
     {
